@@ -1,0 +1,222 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Encabezado */
+header {
+    background-color: #1e3a5e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+/* Contenido principal */
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Libros destacados */
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.book img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.book img:hover {
+    transform: scale(1.1);
+}
+
+/* Categorías */
+.categories {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Página de contacto */
+.contact {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario de contacto */
+label,
+input,
+textarea,
+button {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e3a5e;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Iconos */
+i {
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Colores personalizados */
+/* Cambia estos colores según tus preferencias */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #1e3a5e;
+    color: #fff;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #1e3a5e;
+    color: #fff;
+}
+/* FlexGrid para centrar categorías */
+.flex-grid {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente en varias filas */
+}
+
+.col {
+    flex: 1; /* Hace que las columnas tengan el mismo ancho y se ajusten al contenido */
+    text-align: center;
+    margin: 10px;
+}
+.about {
+    display: flex; /* Utiliza Flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-top: 20px;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px; /* Agrega espacio entre la imagen y el texto */
+}
+
+.about-text {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+/* Más estilos anteriores... */

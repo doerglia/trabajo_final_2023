@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ezF1vF0lLBVjWD8evx1CIkrvbCqgkx2r/R+oaOk6aF5KQlN/2E5dj3LCkU0B4Dn3j" crossorigin="anonymous">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 2H5a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V4c0-1.1-.9-2-2-2zm0 18H5V4h14v16z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <!-- Enlace a la biblioteca Slick Carousel (jQuery necesario) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Enlace a jQuery (necesario para Slick Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Enlace a Slick Carousel -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <title>Tu Librería Online</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="productos.html">Productos</a></li>
+            </ul>
+        </nav>
+        <h1>Tu Librería Online</h1>
+    </header>
+    <section class="main">
+        <h2>Libros Destacados</h2>
+        <div class="featured-books">
+            <div class="book"><img src="img/book1.png" alt="Libro 1"></div>
+            <div class="book"><img src="img/creatividad.jpg" alt="Libro 2"></div>
+            <div class="book"><img src="img/descarga.jpg" alt="Libro 3"></div>
+            <div class="book"><img src="img/equipo.jpg" alt="Libro 4"></div>
+            <div class="book"><img src="img/git.jpg" alt="Libro 5"></div>
+            <div class="book"><img src="img/javascript.jpg" alt="Libro 6"></div>
+            <div class="book"><img src="img/pymx.jpg" alt="Libro 7"></div>
+            <div class="book"><img src="img/web.jpg" alt="Libro 8"></div>
+            <!-- Agrega más libros aquí -->
+        </div>
+        <!-- Más libros destacados -->
+        <h2>Categorías</h2>
+        <ul class="categories">
+            <li><a href="#">Ficción</a></li>
+            <li><a href="#">No Ficción</a></li>
+            <li><a href="#">Ciencia</a></li>
+            <!-- Agrega más categorías -->
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2023 Tu Librería Online - de pythoncba</p>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $('.featured-books').slick({
+                slidesToShow: 3, // Número de libros mostrados a la vez
+                slidesToScroll: 1, // Cantidad de libros a desplazar
+                autoplay: true, // Reproducción automática
+                autoplaySpeed: 3000, // Velocidad de reproducción automática en milisegundos
+                prevArrow: '<button class="slick-prev">Anterior</button>', // Botón anterior personalizado
+                nextArrow: '<button class="slick-next">Siguiente</button>' // Botón siguiente personalizado
+            });
+        });
+    </script>
+    
+</body>
+</html>
+
+    
