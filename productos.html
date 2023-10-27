@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ezF1vF0lLBVjWD8evx1CIkrvbCqgkx2r/R+oaOk6aF5KQlN/2E5dj3LCkU0B4Dn3j" crossorigin="anonymous">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 2H5a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V4c0-1.1-.9-2-2-2zm0 18H5V4h14v16z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <script src="js/validacion.js"></script>
     <title>Productos</title>
 </head>
 <body>
     <header>
-        <nav>
+         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Sobre Nosotros</a></li>
@@ -19,33 +20,160 @@
             </ul>
         </nav>
         <h1>Productos</h1>
+        
     </header>
     <section class="products">
+        <div id="cart">
+            <div class="cart-header">
+                <h3>Carrito de Compras</h3>
+            </div>
+            <ul id="cart-items">
+                <!-- Los libros seleccionados se mostrarán aquí -->
+            </ul>
+            <div class="cart-total">
+                <p>Total: $<span id="total-amount">0.00</span></p>
+            </div>
+        </div>
         <div class="category">
             <h2>Ficción</h2>
-            <div class="book">
-                <img src="img/creatividad.jpg" alt="Libro de Ficción 1">
-                <h3>Libro de Ficción 1</h3>
-                <p>Descripción del libro de Ficción 1.</p>
-                <p>Precio: $15.00</p>
+            <div class="scroll-container">
+                <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                    <img src="img/ficcion1.jpg" alt="Dune">
+                    <h3>Dune</h3>
+                    <p>Precio: $2650</p>
+                    <button class="add-to-cart-button" data-title="Dune" data-price="2650">Agregar</button>
+                    <div id="desc1" class="description-popup">
+                        <p>Es una novela de ciencia ficción que se centra en la historia de Paul Atreides y su familia en el árido planeta Arrakis, donde luchan por controlar una especia valiosa mientras enfrentan desafíos políticos y conflictos.</p>
+                    </div>
+                </div>
+                
+            <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/ficcion2.jpg" alt="Viajeros de la Noche">
+                <h3>Viajeros de la Noche</h3>
+                <p>Precio: $1890</p>
+                <button class="add-to-cart-button" data-title="Viajeros de la Noche" data-price="1890">Agregar</button>
+                <div id="desc2" class="description-popup">
+                    <p>Es una novela de ciencia ficción escrita por Isaac Asimov. En la historia, un grupo de personas descubre una máquina del tiempo portátil que les permite viajar al pasado y al futuro. A medida que exploran diferentes épocas, deben lidiar con las implicaciones éticas y paradojas temporales. La narrativa se centra en cuestiones filosóficas y morales relacionadas con los viajes en el tiempo</p>
+                </div>
+            </div>
+
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/ficcion3.jpg" alt="El Crimen del Lago">
+                <h3>El Crimen del Lago</h3>
+                <p>Precio: $3790</p>
+                <button class="add-to-cart-button" data-title="El Crimen del Lago" data-price="3790">Agregar</button>
+                <div id="desc3" class="description-popup">
+                    <p>Es un apasionante thriller que sumerge a los lectores en un misterio inquietante. Cuando un cuerpo sin vida aparece en el tranquilo lago de un pintoresco pueblo, el detective Sarah Williams se embarca en una búsqueda de la verdad que revela oscuros secretos y giros inesperados. Con una narrativa envolvente, esta novela te mantendrá al borde de tu asiento hasta la última página.</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/ficcion4.jpg" alt="2010 Odisea DOS">
+                <h3>2010 Odisea DOS</h3>
+                <p>Precio: $5600</p>
+                <button class="add-to-cart-button" data-title="2010 Odisea DOS" data-price="5600">Agregar</button>
+                <div id="desc4" class="description-popup">
+                    <p>Es una obra maestra de la ciencia ficción escrita por Arthur C. Clarke. Esta secuela de "2001: Una Odisea del Espacio" nos lleva a un intrigante viaje al espacio profundo mientras la humanidad explora los misterios de monolitos alienígenas y se enfrenta a un futuro incierto. Llena de enigmas cósmicos y maravillas tecnológicas, esta novela es un clásico que desafía la mente y la imaginación</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/ficcion5.jpg" alt="Los 100">
+                <h3>Los 100</h3>
+                <p>Precio: $6390</p>
+                <button class="add-to-cart-button" data-title="Los 100" data-price="6390">Agregar</button>
+                <div id="desc5" class="description-popup">
+                    <p>Es el segundo libro de la emocionante serie de Kass Morgan. En un mundo posapocalíptico, cien jóvenes del espacio son enviados de regreso a la Tierra para determinar si es habitable nuevamente. En esta continuación, los sobrevivientes enfrentan nuevos desafíos, secretos oscuros y una lucha constante por la supervivencia en un mundo hostil lleno de peligros y misterios. La narrativa cautivadora y los giros inesperados mantienen a los lectores ansiosos por descubrir el destino de estos valientes personajes.</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/ficcion6.jpg" alt="Amos del Tiempo">
+                <h3>Amos del Tiempo</h3>
+                <p>Precio: $4350</p>
+                <button class="add-to-cart-button" data-title="Amos del Tiempo" data-price="4350">Agregar</button>
+                <div id="desc6" class="description-popup">
+                    <p>Es la segunda entrega de la apasionante serie de aventuras escrita por Eugenio Prados. En esta novela, los jóvenes protagonistas viajan a través del tiempo para desvelar un misterio relacionado con el legendario tesoro del Unicornio. A medida que exploran diferentes épocas históricas, los lectores se sumergen en un emocionante viaje repleto de intriga, acción y enigmas por resolver</p>
+                </div>
             </div>
             <!-- Agrega más libros de Ficción -->
         </div>
+        </div>
         <div class="category">
             <h2>No Ficción</h2>
-            <div class="book">
-                <img src="img/equipo.jpg" alt="Libro de No Ficción 1">
-                <h3>Libro de No Ficción 1</h3>
-                <p>Descripción del libro de No Ficción 1.</p>
-                <p>Precio: $18.00</p>
+            <a name="NoFicción"></a>
+            <div class="scroll-container">
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/equipo.jpg" alt="Trabajo en Equipo">
+                <h3>Trabajo en Equipo</h3>
+                <p>Precio: $1800</p>
+                <button class="add-to-cart-button" data-title="Trabajo en Equipo" data-price="1800">Agregar</button>
+                <div id="descno1" class="description-popup">
+                    <p>La Fuerza de la Colaboración" es una obra inspiradora que desentraña los secretos de la sinergia entre individuos. A través de conmovedoras historias y consejos prácticos, este libro te guía hacia una comprensión profunda de cómo la colaboración efectiva puede potenciar logros increíbles. Descubre cómo construir equipos sólidos y alcanzar el éxito a través de la unión de talentos y esfuerzos.</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/creatividad.jpg" alt="Creatividad y Desarrollo Personal">
+                <h3>Creatividad y Desarrollo Personal</h3>
+                <p>Precio: $2790</p>
+                <button class="add-to-cart-button" data-title="Creatividad y Desarrollo Personal" data-price="2790">Agregar</button>
+                <div id="descno2" class="description-popup">
+                    <p>Es una obra que explora el poder de la creatividad como una herramienta para el crecimiento y la autorrealización. A través de ejercicios prácticos y ejemplos inspiradores, este libro te guía en un viaje hacia la expansión de tus habilidades creativas y su aplicación en tu desarrollo personal. Descubre cómo la creatividad puede impulsar la innovación y la transformación en todas las áreas de tu vida.</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/javascript.jpg" alt="Aprendiendo JavaScript">
+                <h3>Aprendiendo JavaScript</h3>
+                <p>Precio: $7400</p>
+                <button class="add-to-cart-button" data-title="Aprendiendo JavaScript" data-price="7400">Agregar</button>
+                <div id="descno3" class="description-popup">
+                    <p>Es una guía esencial para aquellos que desean dominar el lenguaje de programación JavaScript. Desde los conceptos fundamentales hasta proyectos prácticos, este libro te lleva a través de un viaje de aprendizaje, enseñándote cómo crear interactividad en sitios web y aplicaciones. Con ejemplos claros y ejercicios prácticos, estarás en camino para convertirte en un desarrollador web competente</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/web.jpg" alt="No me Hagas Pensar">
+                <h3>No me Hagas Pensar</h3>
+                <p>Precio: $4300</p>
+                <button class="add-to-cart-button" data-title="No me Hagas Pensar" data-price="4300">Agregar</button>
+                <div id="descno4" class="description-popup">
+                    <p>Es una obra clásica sobre usabilidad y diseño web escrita por Steve Krug. Este libro ofrece consejos valiosos para diseñadores y desarrolladores web, centrándose en la creación de experiencias de usuario intuitivas y efectivas. Con ejemplos claros y principios prácticos, te ayudará a entender cómo los usuarios interactúan con los sitios web y cómo mejorar la usabilidad para crear productos digitales excepcionales</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/noficcion0.jpg" alt="Informatica Basica">
+                <h3>Informatica Basica</h3>
+                <p>Precio: $6100</p>
+                <button class="add-to-cart-button" data-title="Informatica Basica" data-price="6100">Agregar</button>
+                <div id="descno5" class="description-popup">
+                    <p>Es una guía fundamental para aquellos que desean adentrarse en el mundo de la informática. Ofrece una introducción comprensible a los conceptos esenciales, desde hardware y software hasta navegación en internet y seguridad cibernética. Con explicaciones claras y ejemplos prácticos, esta obra es ideal para principiantes que desean adquirir conocimientos sólidos en informática</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/seguridad.jpg" alt="Seguridad Informatica">
+                <h3>Seguridad Informatica</h3>
+                <p>Precio: $8250</p>
+                <button class="add-to-cart-button" data-title="Seguridad Informatica" data-price="8250">Agregar</button>
+                <div id="descno6" class="description-popup">
+                    <p> Es una lectura imprescindible para cualquier organización que busque proteger sus activos digitales. Este libro proporciona estrategias y mejores prácticas para salvaguardar la información confidencial, prevenir ataques cibernéticos y garantizar la continuidad del negocio. Con enfoque en amenazas empresariales y soluciones efectivas, es una herramienta esencial para mantener la seguridad en un mundo digital</p>
+                </div>
+            </div>
+           <div class="bookk" onmouseover="showDescription('description')" onmouseout="hideDescription('description')">
+                <img src="img/git.jpg" alt="Pro GIT">
+                <h3>Pro GIT</h3>
+                <p>Precio: $3600</p>
+                <button class="add-to-cart-button" data-title="Pro GIT" data-price="3600">Agregar</button>
+                <div id="descno7" class="description-popup">
+                    <p>Es la guía definitiva para comprender y dominar el sistema de control de versiones Git. Escrito por Scott Chacon y Ben Straub, este libro te lleva a través de todos los aspectos de Git, desde los conceptos básicos hasta técnicas avanzadas. Aprenderás a rastrear cambios, colaborar en proyectos, y administrar tu flujo de trabajo de desarrollo de software con confianza. Con ejemplos prácticos y consejos útiles, "Pro Git" es una herramienta esencial para cualquier desarrollador</p>
+                </div>
             </div>
             <!-- Agrega más libros de No Ficción -->
         </div>
+        </div>
+       
         <!-- Agrega más categorías -->
     </section>
+   
     <footer>
         <p>&copy; 2023 Tu Librería Online - de pythoncba</p>
     </footer>
+     
 </body>
 </html>
 

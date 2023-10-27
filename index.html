@@ -9,13 +9,12 @@
     <!-- Enlace a la biblioteca Slick Carousel (jQuery necesario) -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
     <!-- Enlace a jQuery (necesario para Slick Carousel) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
     <!-- Enlace a Slick Carousel -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <title>Tu Librería Online</title>
+    <script src="js/validacion.js"></script>
+    <title>Tu Librería Online</title>   
 </head>
 <body>
     <header>
@@ -29,6 +28,17 @@
         </nav>
         <h1>Tu Librería Online</h1>
     </header>
+    <div id="cart">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+        </div>
+        <ul id="cart-items">
+            <!-- Los libros seleccionados se mostrarán aquí -->
+        </ul>
+        <div class="cart-total">
+            <p>Total: $<span id="total-amount">0.00</span></p>
+        </div>
+    </div>
     <section class="main">
         <h2>Libros Destacados</h2>
         <div class="featured-books">
@@ -45,9 +55,9 @@
         <!-- Más libros destacados -->
         <h2>Categorías</h2>
         <ul class="categories">
-            <li><a href="#">Ficción</a></li>
-            <li><a href="#">No Ficción</a></li>
-            <li><a href="#">Ciencia</a></li>
+            <li><a href="productos.html#Ficción">Ficción</a></li>
+            <li><a href="productos.html#No Ficción">No Ficción</a></li>
+            <li><a href="#">Otras</a></li>
             <!-- Agrega más categorías -->
         </ul>
     </section>
@@ -60,7 +70,7 @@
                 slidesToShow: 3, // Número de libros mostrados a la vez
                 slidesToScroll: 1, // Cantidad de libros a desplazar
                 autoplay: true, // Reproducción automática
-                autoplaySpeed: 3000, // Velocidad de reproducción automática en milisegundos
+                autoplaySpeed: 1000, // Velocidad de reproducción automática en milisegundos
                 prevArrow: '<button class="slick-prev">Anterior</button>', // Botón anterior personalizado
                 nextArrow: '<button class="slick-next">Siguiente</button>' // Botón siguiente personalizado
             });

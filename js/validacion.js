@@ -17,3 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function showDescription(descriptionId) {
+    const descriptionPopup = document.getElementById(descriptionId);
+    descriptionPopup.style.display = "block";
+}
+
+function hideDescription(descriptionId) {
+    const descriptionPopup = document.getElementById(descriptionId);
+    descriptionPopup.style.display = "none";
+}

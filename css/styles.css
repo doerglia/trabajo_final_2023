@@ -1,10 +1,11 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif; 
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
     color: #333;
+    line-height: 1.6;
 }
 
 a {
@@ -15,6 +16,7 @@ a {
 
 a:hover {
     color: #0056b3;
+    text-decoration: underline; 
 }
 
 /* Encabezado */
@@ -23,13 +25,32 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 header h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 42px;
+    font-size: 42px; 
     margin: 0;
     letter-spacing: 2px;
+    text-transform: uppercase; 
+}
+
+/* Efecto de texto animado */
+header h1:hover {
+    animation: bounce 0.5s infinite; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Barra de navegación */
@@ -52,7 +73,9 @@ nav ul li a {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none; 
     transition: color 0.3s ease;
+    font-size: 16px; 
 }
 
 nav ul li a:hover {
@@ -60,6 +83,7 @@ nav ul li a:hover {
 }
 
 /* Contenido principal */
+
 .main {
     max-width: 1200px;
     margin: 20px auto;
@@ -73,6 +97,7 @@ h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     color: #333;
+    
 }
 
 /* Libros destacados */
@@ -98,38 +123,76 @@ h2 {
 .categories {
     list-style: none;
     padding: 0;
+    display: flex; 
+    gap: 10px;
 }
 
+/* Estilos para los elementos de la lista (cada enlace) */
 .categories li {
-    display: inline;
-    margin-right: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los enlaces (botones) */
+.categories a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto hover */
+.categories a:hover {
+    background-color: #0056b3;
 }
 
 /* Página de contacto */
 .contact {
     max-width: 600px;
     margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-/* Formulario de contacto */
+/* Estilos para los campos de entrada y etiquetas */
 label,
 input,
-textarea,
-button {
+textarea {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     width: 100%;
+    font-size: 16px;
 }
 
+/* Estilo para las etiquetas */
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Estilo para los campos de entrada de texto */
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de envío */
 button {
     background-color: #007BFF;
     color: #fff;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
@@ -155,7 +218,6 @@ i {
 }
 
 /* Colores personalizados */
-/* Cambia estos colores según tus preferencias */
 body {
     background-color: #f7f7f7;
     color: #333;
@@ -190,33 +252,213 @@ footer {
 /* FlexGrid para centrar categorías */
 .flex-grid {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente en varias filas */
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 .col {
-    flex: 1; /* Hace que las columnas tengan el mismo ancho y se ajusten al contenido */
+    flex: 1; 
     text-align: center;
     margin: 10px;
 }
 .about {
-    display: flex; /* Utiliza Flexbox para alinear elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
+    display: flex; 
+    align-items: center; 
     margin-top: 20px;
 }
 
 .about img {
     max-width: 100%;
     height: auto;
-    margin-right: 20px; /* Agrega espacio entre la imagen y el texto */
+    margin-right: 20px; 
 }
 
 .about-text {
-    flex: 1; /* Permite que el texto ocupe el espacio restante */
+    flex: 1; 
 }
 
 .about p {
     font-size: 18px;
     line-height: 1.5;
 }
-/* Más estilos anteriores... */
+
+.category {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.category h2 {
+    margin-bottom: 20px;
+    color: #333; 
+    font-size: 28px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    border-bottom: 2px solid #007BFF; 
+    padding-bottom: 10px; 
+}
+
+.main h2 
+{
+    margin-bottom: 20px;
+    color: #333; 
+    font-size: 28px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    border-bottom: 2px solid #007BFF; 
+    padding-bottom: 10px; 
+}
+
+
+/* Estilos para el contenedor desplazable */
+
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #007BFF transparent;
+}
+
+/* Estilo de la barra de desplazamiento */
+.scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #007BFF;
+    border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Estilos para los libros */
+
+.bookk {
+    flex: 0 0 calc(33.33% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookk img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.bookk h3 {
+    font-size: 20px;
+    color: #1e3a5e; 
+    text-align: center;
+    margin: 0;
+}
+
+.bookk p {
+    font-size: 16px;
+    color: #444; 
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Carrito de compras */
+
+#cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px; 
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.cart-header {
+    text-align: center;
+    background-color: #1e3a5e;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 14px;
+} 
+
+.cart-header h3 {
+    margin: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    font-size: 12px; 
+}
+
+.cart-total {
+    border-top: 1px solid #ddd;
+    text-align: right;
+    padding: 5px 0;
+    font-size: 14px; 
+    font-weight: bold;
+}
+
+.cart-total p {
+    margin: 0;
+}
+
+/* Estilo para los botones dentro del carrito */
+#cart-items button {
+    background-color: #8b9aae;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 8px; 
+}
+
+#cart-items button:hover {
+    background-color: #ffc107;
+}
+
+.description-popup {
+    display: none;
+    position: absolute;
+    background-color: #adbfd7; 
+    color: #f6f4f4; 
+    border-radius: 5px; 
+    width: 300px; 
+    padding: 10px; 
+    box-shadow: 2px 2px 6px rgba(242, 242, 244, 0.1);
+    z-index: 1; 
+    white-space: normal; 
+    word-wrap: break-word; 
+}
+
+.bookk {
+    position: relative; 
+}
+
+.bookk:hover .description-popup {
+    display: block; 
+}
